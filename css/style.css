@@ -1,0 +1,474 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rajdhani:wght@600&display=swap');
+
+:root {
+    --neon-blue: #00ddff;
+    --neon-purple: #bf00ff;
+    --background-color: #0d021a; /* Latar belakang ungu sangat gelap */
+    --card-color: rgba(20, 10, 30, 0.7);
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --border-color: rgba(191, 0, 255, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+.content-section-padded {
+    padding-top: 80px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: rgba(13, 2, 26, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-brand {
+    color: var(--heading-color) !important;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--neon-purple);
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: var(--neon-blue) !important;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.nav-link.active {
+    color: var(--neon-blue) !important;
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+}
+
+/* --- General Content --- */
+.content-section {
+    padding: 80px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    text-shadow: 0 0 8px var(--neon-purple), 0 0 15px var(--neon-purple);
+}
+
+.section-title::after { display: none; } /* Garis bawah tidak diperlukan di tema neon */
+
+/* --- Hero Section (About Me) --- */
+.hero-section {
+    min-height: 100vh;
+}
+
+.hero-section h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 3px solid var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue), 0 0 25px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--neon-blue), 0 0 25px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px var(--neon-blue), 0 0 40px var(--neon-blue), inset 0 0 15px var(--neon-blue);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--neon-blue), 0 0 25px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+    }
+}
+
+/* --- Card Styling --- */
+.card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+}
+
+.card-title {
+    color: var(--heading-color);
+    font-weight: 600;
+    text-shadow: 0 0 5px var(--neon-purple);
+}
+
+.card-text, .card-subtitle, .card .list-unstyled li, .skill-item h5 {
+    color: #d4d4d4 !important; /* Warna lebih terang untuk visibilitas */
+}
+
+
+/* --- Button Keren --- */
+.btn-custom {
+    background-color: transparent;
+    border: 2px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+}
+
+.btn-custom:hover {
+    color: var(--background-color);
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), inset 0 0 10px #fff;
+}
+
+/* --- Skills Page --- */
+
+
+.skill-item-simple {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    height: 100%; /* Ensure consistent height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item-simple:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue), 0 0 25px var(--neon-blue);
+}
+
+.skill-item-simple h4 {
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 0;
+    text-shadow: 0 0 5px var(--neon-purple);
+}
+
+.skill-category-box {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px; /* Spacing between boxes */
+    box-shadow: 0 0 15px rgba(191, 0, 255, 0.2); /* Subtle purple glow */
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.skill-category-box:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+    transform: translateY(-5px);
+}
+
+.skill-category-box .category-title {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: left; /* Explicitly left-align */
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: transparent;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+    text-shadow: 0 0 5px var(--neon-purple);
+}
+.footer .fa-heart {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Particles.js container */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--neon-blue);
+    transform: scale(1.2);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical line) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--neon-blue);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: var(--background-color);
+  border: 4px solid var(--neon-purple);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 15px var(--neon-purple);
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid var(--border-color);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--border-color);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--border-color);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--border-color) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -13px;
+}
+
+/* The actual content */
+.timeline-content {
+  padding: 20px 30px;
+  background-color: var(--card-color);
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-container::before {
+    left: 60px;
+    border: medium solid var(--border-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--border-color) transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.about-details {
+    margin-top: 20px;
+}
+
+.detail-item {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.detail-item strong {
+    color: var(--neon-blue);
+    font-weight: 600;
+    display: inline-block;
+    width: 100px; /* Adjust as needed */
+}
+
+.admin-page .table,
+.admin-page .table th,
+.admin-page .table td,
+.admin-page .form-label,
+.admin-page .card-text,
+.admin-page .section-title,
+.admin-page .card-title,
+.admin-page .form-control,
+.admin-page .navbar .nav-link {
+    color: var(--neon-blue) !important;
+}
+
+.admin-page .form-control {
+    background-color: var(--card-color);
+    border-color: var(--border-color);
+}
+
+.admin-page .form-control:focus {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 221, 255, 0.25);
+}
+.accordion-item {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the child elements respect the border radius */
+}
+
+.accordion-header .accordion-button {
+    background-color: transparent;
+    color: var(--heading-color);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 0;
+    text-shadow: 0 0 5px var(--neon-purple);
+}
+
+.accordion-header .accordion-button:not(.collapsed) {
+    color: var(--neon-blue);
+    background-color: rgba(0, 221, 255, 0.1);
+    box-shadow: inset 0 -1px 0 var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.accordion-header .accordion-button:focus {
+    box-shadow: 0 0 15px var(--neon-blue);
+    border-color: var(--neon-blue);
+}
+
+.accordion-body {
+    color: var(--text-color);
+    background-color: rgba(0,0,0,0.2); /* Slightly darker body for contrast */
+}
+
+.accordion-button::after {
+    /* Customizes the default chevron icon */
+    filter: invert(1) grayscale(100%) brightness(2);
+}
+
+.accordion-button:not(.collapsed)::after {
+    /* Changes the icon color when active */
+    filter: brightness(0) saturate(100%) invert(78%) sepia(99%) saturate(399%) hue-rotate(150deg) brightness(102%) contrast(101%);
+}
