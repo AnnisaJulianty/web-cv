@@ -59,7 +59,7 @@ $home_data['about_me'] = $home_data['about_me'] ?? 'Saya seorang mahasiswi siste
                     <li class="nav-item"><a class="nav-link active" href="index.php">Tentang saya</a></li>
                     <li class="nav-item"><a class="nav-link" href="pendidikan.php">Pendidikan</a></li>
                     <li class="nav-item"><a class="nav-link" href="pengalaman.php">Pengalaman</a></li>
-                    <li class="nav-item"><a class="nav-link" href="galeri.php">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.php">Project</a></li>
                     <li class="nav-item"><a class="nav-link" href="skill.php">Skill</a></li>
                     <li class="nav-item"><a class="nav-link" href="artikel.php">Artikel</a></li>
                     <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
