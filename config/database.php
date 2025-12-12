@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root'); // Sesuaikan jika user Anda berbeda
 define('DB_PASS', ''); // Sesuaikan jika Anda menggunakan password
-define('DB_NAME', 'dbcv');
+define('DB_NAME', 'psas_db');
 
 // --- Membuat Koneksi ---
 try {

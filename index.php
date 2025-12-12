@@ -56,7 +56,7 @@ $home_data['about_me'] = $home_data['about_me'] ?? 'Saya seorang mahasiswi siste
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.php">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.php">Tentang saya</a></li>
                     <li class="nav-item"><a class="nav-link" href="pendidikan.php">Pendidikan</a></li>
                     <li class="nav-item"><a class="nav-link" href="pengalaman.php">Pengalaman</a></li>
                     <li class="nav-item"><a class="nav-link" href="galeri.php">Galeri</a></li>
